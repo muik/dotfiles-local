@@ -1,0 +1,6 @@
+"---------------------
+" Plugin configuration
+"---------------------
+
+" ctrlp
+set wildignore+=*/tmp/**/* " for hoian-webapp
