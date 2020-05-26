@@ -4,3 +4,9 @@
 
 [github]
 	user = muik
+
+[pull]
+       default = current
+
+[push]
+       default = current
