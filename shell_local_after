@@ -12,3 +12,24 @@ ldfu() {
 
 # rbenv
 eval "$(rbenv init -)"
+
+# for hoian-webbapp
+push_branch() {
+    current=$(git rev-parse --abbrev-ref HEAD)
+    deploy=$1
+    git co $deploy
+    git pull origin $deploy
+    git merge $current
+    git push origin $deploy
+    git co $current
+}
+push_deploy() {
+    push_branch "deploy/$(date '+%m')"
+}
+push_master() {
+    push_branch 'master'
+}
+
+# prompt
+RPR_SHOW_USER=false # Set to false to disable user in rhs prompt
+RPR_SHOW_HOST=false # Set to false to disable host in rhs prompt
