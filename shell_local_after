@@ -33,3 +33,22 @@ push_master() {
 # prompt
 RPR_SHOW_USER=false # Set to false to disable user in rhs prompt
 RPR_SHOW_HOST=false # Set to false to disable host in rhs prompt
+
+# github commend alias
+alias push="git push"
+alias pull="git pull"
+alias st="git st"
+alias add="git add"
+alias di="git di"
+alias ci="git ci"
+
+# Google Cloud SDK
+GCLOUD_SDK_PATH="$HOME/google-cloud-sdk"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$GCLOUD_SDK_PATH/path.zsh.inc" ]; then source "$GCLOUD_SDK_PATH/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$GCLOUD_SDK_PATH/completion.zsh.inc" ]; then source "$GCLOUD_SDK_PATH/completion.zsh.inc"; fi
+
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.config/gcloud/application_default_credentials.json
